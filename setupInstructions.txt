@@ -1,0 +1,12 @@
+Project creation
+------------------
+- create project folder saranya-ideations
+- go to cmd - cd to the above directory
+- create frontend project - ng new frontend (using angular cli)
+- create backend project - create folder called backend - cd into it - npm init 
+- install backend dependencies 1. npm install express --save 2. npm install mongoose --save 3. npm install client-sessions --save 4. npm install body-parser --save 5. npm install bcryptjs --save
+- create file called server.js to start node server
+- configure basic js files like server.js (to start app), dist folder (for public access), router.js (to load api and non api routes), db.js (for database set up)
+- install library mongoose, client-sessions
+- created schemas in server/model and added api routes in router.js
+- downloaded bootstrap popper.js jquery (this is as per instruction from getbootstrap.com) and kept in dist/lib folder. included them in the index.html
