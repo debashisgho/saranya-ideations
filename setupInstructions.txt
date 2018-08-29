@@ -2,11 +2,43 @@ Project creation
 ------------------
 - create project folder saranya-ideations
 - go to cmd - cd to the above directory
-- create frontend project - ng new frontend (using angular cli)
-- create backend project - create folder called backend - cd into it - npm init 
+- create frontend project - ng new frontend (using angular cli) - remote the .git folder since i do not want to track the frontend project separately. keep the .gitignore file
+- in the front end project add bootstrap and ng-bootstrap (1. npm install --save bootstrap 2. npm install --save @ng-bootstrap/ng-bootstrap)
+
+configure ng-bootstrap and bootsrap css in the project
+
+--change app.module.ts
+
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+@NgModule({
+  ...
+  imports: [NgbModule, ...],
+  ...
+})
+
+--change angular.json to include css
+
+ "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles.css"
+            ],
+
+
+- create backend project - create folder called backend - cd into it - npm init  - create a .gitignore file and configure pattern you want to ignore (i have ignored npm_modules,dist folder)
 - install backend dependencies 1. npm install express --save 2. npm install mongoose --save 3. npm install client-sessions --save 4. npm install body-parser --save 5. npm install bcryptjs --save
 - create file called server.js to start node server
-- configure basic js files like server.js (to start app), dist folder (for public access), router.js (to load api and non api routes), db.js (for database set up)
-- install library mongoose, client-sessions
-- created schemas in server/model and added api routes in router.js
-- downloaded bootstrap popper.js jquery (this is as per instruction from getbootstrap.com) and kept in dist/lib folder. included them in the index.html
+- configure basic js files like server.js (to start app), dist folder (for public access - this would host the compile angular js code), router.js (to load api and non api routes), db.js (for database set up)
+- create schemas in server/model and added api routes in router.js
+
+First commit in git
+------------------------
+ - in the project folder saranya-ideations perform a git init to start tracking (see abovea how .git folder was deleted from frontend and why .gitignore was placed in two different folders)
+ - create repo in github site
+ - sync it. 
+
+How to run
+------------------------
+1. open two command prompt
+2. run nodemon server.js from folder /backend  - this will run the backend and in case of any chnages node server will start automatically
+3. run ng serve from folder /frontend - this will run the frontend and in case of any changes angular dev server will start automatically. 
