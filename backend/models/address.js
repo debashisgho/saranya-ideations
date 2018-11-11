@@ -13,7 +13,7 @@ var addressSchema = mongoose.Schema({
 			pinCode:{type:Number, reuired:true},
 			email:{type:String, required:false},
 			phone:{type:String, required:false},
-			landmark:{type:String, reuired:true},
+			landmark:{type:String, reuired:true}
 	},
 	addressType:{type:String, required:true, enum: ['ShipTo'], default: 'New', trim:true},
     isDefault:{type:Boolean, required:true, default:true},

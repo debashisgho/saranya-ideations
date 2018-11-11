@@ -2,7 +2,7 @@ Project creation
 ------------------
 - create project folder saranya-ideations
 - go to cmd - cd to the above directory
-- create frontend project - ng new frontend (using angular cli) - remote the .git folder since i do not want to track the frontend project separately. keep the .gitignore file
+- create frontend project - ng new frontend (using angular cli) - remove the .git folder since i do not want to track the frontend project separately. keep the .gitignore file
 - in the front end project add bootstrap and ng-bootstrap (1. npm install --save bootstrap 2. npm install --save @ng-bootstrap/ng-bootstrap)
 
 configure ng-bootstrap and bootsrap css in the project
@@ -36,6 +36,15 @@ First commit in git
  - in the project folder saranya-ideations perform a git init to start tracking (see abovea how .git folder was deleted from frontend and why .gitignore was placed in two different folders)
  - create repo in github site
  - sync it. 
+
+rest response
+--------------
+200 - OK
+201- create
+204- no content
+400 - invalid request
+404 - not found
+500 - internal server error
 
 How to run
 ------------------------
